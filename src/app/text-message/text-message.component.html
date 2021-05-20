@@ -1,7 +1,7 @@
 <div class="container">
     <div class="post-container" [ngClass]="{ 'alignRight' : isOther === false, 'alignLeft' : isOther !== false }">
         <div *ngIf="isOther" class="img-container">
-            <img [src]="post.userImg">
+            <div [ngStyle]="{ 'background-image': 'url(' + post.userImg + ')'}" ></div>
         </div>
         <div class="post-row">
             <div class="info-row">
@@ -13,11 +13,13 @@
                 </div>
             </div>
             <div class="text-container">
-                <p><span>{{post.message}}</span><a *ngIf="post.message.length > 200" href="#">Read more</a></p>
+                <input type="checkbox" [checked]="isChecked" id="expanded">
+                <p [ngClass]="{ 'truncated' : isChecked === true}">{{post.message}}</p>
+                <a (click)="onCheck($event)">Read more</a>
             </div>
         </div>
         <div *ngIf="!isOther" class="img-container right-img">
-            <img [src]="post.userImg">
+            <div [ngStyle]="{'background-image': 'url(' + post.userImg + ')'}" ></div>
         </div>
     </div>
 </div>

@@ -1,19 +1,18 @@
-<!-- HEADER CON FILTRO -->
+<!-- FILTER SECTION -->
 <div class="main-container">
-
-
-<div class="header">
-<app-filter-post></app-filter-post>
-</div>
-<!-- MAIN CON LISTA DI MESSAGGI -->
-<div class="main"> 
-<app-text-message *ngFor="let post of filteredPosts" [post]="post"></app-text-message>
-<app-text-message *ngFor="let localPost of localStoragePosts" [post]="localPost" [isOther]="false"></app-text-message>
-
-</div>
-<!-- FOOTER CON TEXT INPUT -->
-<div class="footer">
-    <app-add-post></app-add-post>
-</div>
+    <div class="header">
+        <app-filter-post></app-filter-post>
+    </div>
+    <!-- LIST OF POSTS -->
+    <div class="main">
+        <div class="gradient"></div>
+        <app-text-message *ngFor="let post of filteredPosts" [post]="post"></app-text-message>
+        <app-text-message *ngFor="let localPost of localStoragePosts" [post]="localPost" [isOther]="false">
+        </app-text-message>
+    </div>
+    <!-- ADD POST SECTION -->
+    <div class="footer">
+        <app-add-post></app-add-post>
+    </div>
 
 </div>

@@ -1,12 +1,12 @@
 .main-container {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
     width: 100%;
 }
-   
+
 .header {
     width: 100%;
 }
@@ -15,9 +15,3 @@ flex-direction: column;
     width: 100%;
 }
    
-@font-face {
-    font-family: Univers;
-    font-style: normal;
-    src: url('../assets/fonts/UniversLT55Roman.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../assets/fonts/UniversLT55Roman.otf') format("opentype");
-}

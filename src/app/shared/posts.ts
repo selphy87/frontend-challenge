@@ -34,8 +34,8 @@ export const posts: Post[] = [
     message: "I’ve been running scams on the streets since I was ten. I was kicked out of the flight academy for having a mind of my own. I’m gonna be a pilot. The best in the galaxy."
 },
 {
-    userFullName : " Doe",
-    date : new Date(),
+    userFullName : "John Doe",
+    date : new Date(2019,7,18,16,33),
     userImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 }  

@@ -40,10 +40,25 @@
 .alignLeft .post-row .text-container{
     //  align-self: flex-start;
     //  margin-right: 30%;
+    position: relative;
       padding: 25px 40px;
       background-color: #EFF2F7;
-      
+      margin-left: 12px;
  }
+
+ .alignLeft .post-row .text-container::before {
+  content: "";
+  position:absolute;
+  margin-top:-6px;
+  margin-right:-5px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #EFF2F7;
+  transform:rotate(45deg);
+  left: -15px; 
+  top: 4px;
+}
+
   
 .post-row.alignRight {
     justify-content: space-between;
@@ -51,10 +66,24 @@
 .alignRight .post-row .text-container{
   //  align-self: flex-start;
     // margin-left: 30%;
-    
+    position: relative;
     padding: 25px 40px;
     background-color: #C2CDDD;
-    font-family: UniversLTStd, Univers LT Std;
+    font-family: Univers;
+    margin-right: 12px;
+}
+
+.alignRight .post-row .text-container::after {
+  content: "";
+  position:absolute;
+  margin-top:-6px;
+  margin-left:-5px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #C2CDDD;
+  transform:rotate(-45deg);
+  right: -15px; 
+  top: 4px;
 }
 
 .alignRight .post-row {
@@ -72,10 +101,13 @@
 }
 
 
-.img-container img{
+.img-container div{
     width: 40px;
     height: 40px;
     border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .img-container.right-img {
@@ -85,3 +117,40 @@
 .post-date {
     align-self: flex-end;
 }
+
+.text-container {
+  
+    input {
+      opacity: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+    }
+    
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color: rgb(45, 45, 46);
+    }
+
+    a:hover {
+      
+      color: rgb(45, 45, 46, 0.6);
+    }
+    
+    input:checked + p {
+      -webkit-line-clamp: unset;
+    }
+    
+    input:checked ~ a,
+    p:not(.truncated) ~ a{
+      display: none;
+    }
+    
+  }

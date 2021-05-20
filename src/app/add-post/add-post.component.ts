@@ -9,16 +9,20 @@ import { PostService } from '../shared/post.service';
 })
 export class AddPostComponent implements OnInit {
 
-  text : string;
+  postText : string;
   constructor(private postService : PostService) { }
 
   ngOnInit(): void {
   }
 
   publish(){
-    let post = new Post("You", new Date(), this.text, "/assets/img/photo.png")
+    let post = new Post("You", new Date(), this.postText, "/assets/img/photo.png")
     this.postService.addPost(post);
-    this.text = '';
+    this.postText = '';
+  }
+
+  deleteAll(){
+    this.postService.deleteAll();
   }
 
 }

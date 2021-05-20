@@ -1,0 +1,87 @@
+.container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-family: Univers;
+}
+.post-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+.post-container.alignRight {
+    display: flex;
+    margin-left: 30%;
+    
+}
+.post-container.alignLeft {
+    display: flex;
+    margin-right: 30%;
+    
+}
+.info-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-row.alignRight .user_name{
+  // margin-left: 30%;
+}
+.info-row.alignLeft .post_date{
+   // margin-right: 30%;
+ }
+
+.post-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.alignLeft .post-row .text-container{
+    //  align-self: flex-start;
+    //  margin-right: 30%;
+      padding: 25px 40px;
+      background-color: #EFF2F7;
+      
+ }
+  
+.post-row.alignRight {
+    justify-content: space-between;
+}
+.alignRight .post-row .text-container{
+  //  align-self: flex-start;
+    // margin-left: 30%;
+    
+    padding: 25px 40px;
+    background-color: #C2CDDD;
+    font-family: UniversLTStd, Univers LT Std;
+}
+
+.alignRight .post-row {
+    justify-content: space-between;
+    width: 90%;
+}
+
+.img-container{
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.alignRight .post-row .img-container{
+    width: 10%;
+}
+
+
+.img-container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.img-container.right-img {
+    align-self: flex-start;
+}
+
+.post-date {
+    align-self: flex-end;
+}

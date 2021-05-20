@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Univers;
+    font-style: normal;
+    src: url('./assets/fonts/UniversLT55Roman.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./assets/fonts/UniversLT55Roman.otf') format("opentype");
+}
+

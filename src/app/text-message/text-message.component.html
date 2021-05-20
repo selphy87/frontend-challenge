@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="post-container" [ngClass]="{ 'alignRight' : isOther === false, 'alignLeft' : isOther !== false }">
+        <div *ngIf="isOther" class="img-container">
+            <img [src]="post.userImg">
+        </div>
+        <div class="post-row">
+            <div class="info-row">
+                <div class="user_name">
+                    <p><b>{{post.userFullName}}</b></p>
+                </div>
+                <div class="post_date">
+                    <p>{{post.date | date:'dd/MM/yyyy HH:mm'}}</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <p><span>{{post.message}}</span><a *ngIf="post.message.length > 200" href="#">Read more</a></p>
+            </div>
+        </div>
+        <div *ngIf="!isOther" class="img-container right-img">
+            <img [src]="post.userImg">
+        </div>
+    </div>
+</div>

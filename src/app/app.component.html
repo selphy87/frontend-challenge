@@ -5,7 +5,6 @@
     </div>
     <!-- LIST OF POSTS -->
     <div class="main">
-        <div class="gradient"></div>
         <app-text-message *ngFor="let post of filteredPosts" [post]="post"></app-text-message>
         <app-text-message *ngFor="let localPost of localStoragePosts" [post]="localPost" [isOther]="false">
         </app-text-message>

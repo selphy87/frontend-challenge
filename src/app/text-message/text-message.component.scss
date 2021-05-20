@@ -25,21 +25,12 @@
     justify-content: space-between;
 }
 
-.info-row.alignRight .user_name{
-  // margin-left: 30%;
-}
-.info-row.alignLeft .post_date{
-   // margin-right: 30%;
- }
-
 .post-row {
     display: flex;
     flex-direction: column;
 }
 
 .alignLeft .post-row .text-container{
-    //  align-self: flex-start;
-    //  margin-right: 30%;
     position: relative;
       padding: 25px 40px;
       background-color: #EFF2F7;
@@ -64,8 +55,6 @@
     justify-content: space-between;
 }
 .alignRight .post-row .text-container{
-  //  align-self: flex-start;
-    // margin-left: 30%;
     position: relative;
     padding: 25px 40px;
     background-color: #C2CDDD;

@@ -11,7 +11,6 @@ export class TextMessageComponent implements OnInit {
 
   @Input() post: Post;
   @Input() isOther: boolean = true;
-  // @ViewChild('checkbox') checkbox; 
   isChecked : boolean = false;
   
   constructor() { }
@@ -19,7 +18,6 @@ export class TextMessageComponent implements OnInit {
   ngOnInit(): void {
     const ps = document.querySelectorAll('p');
     const observer = new (window as any).ResizeObserver(entries => {
-      console.log(entries)
     for (let entry of entries) {
       entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('truncated');
     }
@@ -30,16 +28,8 @@ export class TextMessageComponent implements OnInit {
   });
   }
 
-  ngAfterViewInit() {
-    // console.log(this.checkbox.nativeElement);
-  }
-
-  onCheck(data){
-    data.stopPropagation();
-    console.log(data)
+  onCheck(){
     this.isChecked =!this.isChecked
-    // console.log(this.checkbox.nativeElement)
-   // this.checkbox.nativeElement.
   }
 
 

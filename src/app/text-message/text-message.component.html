@@ -15,7 +15,7 @@
             <div class="text-container">
                 <input type="checkbox" [checked]="isChecked" id="expanded">
                 <p [ngClass]="{ 'truncated' : isChecked === true}">{{post.message}}</p>
-                <a (click)="onCheck($event)">Read more</a>
+                <a (click)="onCheck()">Read more</a>
             </div>
         </div>
         <div *ngIf="!isOther" class="img-container right-img">
